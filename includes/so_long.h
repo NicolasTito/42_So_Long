@@ -13,6 +13,12 @@ typedef struct s_map
 	int			**map
 }				t_map;
 
-int	check_map(char *map);
+typedef struct s_info
+{
+	t_map		*map;
+}				t_info;
+
+int		check_map(char *file_name, t_map **map);
+void	init_map(t_map **map);
 
 #endif
