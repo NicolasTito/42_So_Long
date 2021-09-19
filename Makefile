@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/09/15 17:12:30 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/09/19 18:40:48 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,13 +27,14 @@ SRC_PATH = ./src
 
 OBJ_PATH = ./obj
 
-SRC_NAME = main.c\
+SRC_NAME =	main.c\
+			checkers.c\
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.o))
 
 SRC = $(addprefix $(SRC_PATH)/, $(SRC_NAME))
 
-all : $(NAME) $(NAME_BONUS)
+all : $(NAME)
 
 $(NAME): $(OBJ)
 	@make -C $(LIBFT_PATH)
