@@ -17,7 +17,7 @@ typedef struct s_map
 {
 	int			w;
 	int			h;
-	int			**map;
+	char		**map;
 	t_info_map	info;
 }				t_map;
 
@@ -28,6 +28,7 @@ typedef struct s_info
 
 int		check_map(char *file_name, t_map **map);
 void	init_map(t_map **map);
-void	start_map(int fd, t_map **map, char *file_name);
+void	start_map(int fd, t_map **map);
+void	exit_program(t_info *s_i);
 
 #endif

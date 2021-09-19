@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/09/19 20:13:31 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/09/19 23:15:44 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC_PATH = ./src
 OBJ_PATH = ./obj
 
 SRC_NAME =	main.c\
-			checkers.c\
+			checkers_map.c\
 			init_struct.c\
 			map_functions.c\
 
