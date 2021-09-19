@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/09/19 18:40:48 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/09/19 20:13:31 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,8 @@ OBJ_PATH = ./obj
 
 SRC_NAME =	main.c\
 			checkers.c\
+			init_struct.c\
+			map_functions.c\
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.o))
 

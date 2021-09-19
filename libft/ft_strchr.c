@@ -6,26 +6,19 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 19:41:02 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/08/07 18:04:31 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/19 20:55:01 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-char	*ft_strchr(const char *str, int c)
+int	ft_strchr(char *s, char c)
 {
-	int	i;
-
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (str[i])
+	while (c != *s)
 	{
-		if (str[i] == (char)c)
-			return ((char *)(str + i));
-		i++;
+		if (*s == 0)
+			return (0);
+		s++;
 	}
-	if (str[i] == (char)c)
-		return ((char *)(str + i));
-	return (NULL);
+	return (1);
 }

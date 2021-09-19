@@ -6,7 +6,13 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 20:03:46 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/19 20:03:47 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/19 20:39:32 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "so_long.h"
+
+void	start_map(int fd, t_map **map, char *file_name)
+{
+	
+}
