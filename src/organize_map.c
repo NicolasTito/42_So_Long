@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 03:07:14 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/20 08:52:45 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/20 10:35:36 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ static void	populate_lr_wall(t_wall *s_w, t_map **map)
 	}
 }
 
-void	populate_wall_corner(t_map **map)
+void	populate_wall_corner(t_map **map, char **temp)
 {
 	t_wall	s_w;
 
@@ -93,6 +93,7 @@ void	populate_wall_corner(t_map **map)
 	(*map)->map[0][s_w.door - 1] = DOOR;
 	populate_tb_wall(&s_w, map);
 	populate_lr_wall(&s_w, map);
+	populate_center_map(map, temp, &s_w);
 
 	int i = -1;
 	int j;

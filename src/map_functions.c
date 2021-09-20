@@ -6,11 +6,38 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 20:03:46 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/20 08:08:14 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/20 10:34:20 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+void	populate_center_map(t_map **map, char **temp, t_wall *s_w)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (++i <= s_w->h_w)
+	{
+		j = 0;
+		while (++j <= s_w->w_w)
+		{
+			if (temp[i][j] == '0')
+				(*map)->map[i][j] = FLOOR;
+			else if (temp[i][j] == '1')
+				(*map)->map[i][j] = HOLE;
+			else if (temp[i][j] == 'P')
+				(*map)->map[i][j] = PERS;
+			else if (temp[i][j] == 'C')
+				(*map)->map[i][j] = COLEC;
+			else if (temp[i][j] == 'E')
+				(*map)->map[i][j] = EXIT;
+			else if (temp[i][j] == 'N')
+				(*map)->map[i][j] = ENE;
+		}
+	}
+}
 
 /*Allocate and add the file in array*/
 char	**start_map(int fd, t_map **map)
@@ -56,6 +83,6 @@ void	organize_map(t_map **map, char **temp)
 		while (++j < (*map)->w)
 			(*map)->map[i][j] = -1;
 	}
-	populate_wall_corner(map);
+	populate_wall_corner(map, temp);
 	free_temp(map, temp);
 }
