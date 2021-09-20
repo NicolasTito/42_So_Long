@@ -1,34 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/20 03:13:41 by nide-mel          #+#    #+#             */
+/*   Updated: 2021/09/20 07:21:14 by nide-mel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
 # define SO_LONG_H
 # define TRUE 1
 # define FALSE 0
 
 # include "../libft/includes/libft.h"
+# include "info_map.h"
+# include "struct_sl.h"
 # include <fcntl.h>
 
-typedef struct s_info_map
-{
-	int	c;
-	int	exit;
-	int	p;
-	int	en;
-}				t_info_map;
-typedef struct s_map
-{
-	int			w;
-	int			h;
-	char		**map;
-	t_info_map	info;
-}				t_map;
-
-typedef struct s_info
-{
-	t_map		*map;
-}				t_info;
-
-int		check_map(char *file_name, t_map **map, int fd);
+int		check_map(char *file_name, t_map **map, char **temp);
 void	init_map(t_map **map);
-void	start_map(int fd, t_map **map);
-void	exit_program(t_info *s_i);
+char	**start_map(int fd, t_map **map);
+void	exit_program(t_info *s_i, char **temp);
+void	free_temp(t_map **map, char **temp);
+void	organize_map(t_map **map, char **temp);
+void	exit_error(void);
+void	free_temp(t_map **map, char **temp);
+void	init_wall(t_wall *s_w, int h, int w);
+void	populate_wall_corner(t_map **map);
 
 #endif

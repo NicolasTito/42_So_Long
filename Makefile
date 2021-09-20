@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/09/20 00:01:55 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/09/20 03:07:09 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 RM = rm -f
 
-HEADER = ./includes/$(wildcard*.h)
+HEADER = ./includes/$(wildcard *.h)
 
 LIBFT = ./libft/libft.a
 LIBFT_PATH = ./libft
@@ -32,6 +32,7 @@ SRC_NAME =	main.c\
 			init_struct.c\
 			map_functions.c\
 			utils.c\
+			organize_map.c\
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.o))
 

@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 19:22:38 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/19 20:31:06 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/20 07:21:57 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,16 @@ void	init_map(t_map **map)
 	(*map)->info.exit = 0;
 	(*map)->info.p = 0;
 	(*map)->info.en = 0;
+}
+
+void	init_wall(t_wall *s_w, int h, int w)
+{
+	s_w->door = (h % 2) - 1;
+	s_w->h_w = h - 2;
+	s_w->w_w = w - 2;
+	s_w->torch_w = 1;
+	if (s_w->h_w > 3)
+		s_w->torch_h = s_w->door - 1;
+	else if (s_w->h_w == 1)
+		s_w->torch_h = 0;
 }

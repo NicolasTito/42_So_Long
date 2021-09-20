@@ -1,35 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   struct_sl.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/19 23:33:43 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/20 03:37:16 by nide-mel         ###   ########.fr       */
+/*   Created: 2021/09/20 05:30:47 by nide-mel          #+#    #+#             */
+/*   Updated: 2021/09/20 06:04:13 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#ifndef STRUCT_SL_H
+# define STRUCT_SL_H
 
-void	exit_program(t_info *s_i, char **temp)
+# include "so_long.h"
+
+typedef struct s_info_map
 {
-	free_temp(&s_i->map, temp);
-	exit(1);
-}
+	int	c;
+	int	exit;
+	int	p;
+	int	en;
+}				t_info_map;
 
-void	free_temp(t_map **map, char **temp)
+typedef struct s_wall
 {
-	int	i;
+	int	door;
+	int	h_w;
+	int	w_w;
+	int	torch_h;
+	int	torch_w;
+}				t_wall;
 
-	i = -1;
-	while (++i < (*map)->h)
-		free(temp[i]);
-	free(temp);
-}
-
-void	exit_error(void)
+typedef struct s_map
 {
-	ft_putstr_fd("UNEXPECTED ERROR\n", 1);
-	exit(1);
-}
+	int			w;
+	int			h;
+	int			**map;
+	t_info_map	info;
+}				t_map;
+
+typedef struct s_info
+{
+	t_map		*map;
+}				t_info;
+
+#endif
