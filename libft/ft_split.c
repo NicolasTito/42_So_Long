@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/20 11:07:55 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/08/07 18:09:33 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/19 23:52:52 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ char	**ft_split(char const *s, char c)
 		start = i;
 		while (s[i] != c && s[i] != '\0')
 			i++;
-		new[j] = ft_substr(s, start, i - start);
+		new[j] = ft_substr((char *)s, start, i - start);
 		j++;
 	}
 	new[j] = NULL;

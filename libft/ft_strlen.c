@@ -6,15 +6,15 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 18:43:02 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/08/07 18:05:50 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/20 00:04:55 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
-	size_t	i;
+	int		i;
 
 	i = 0;
 	while (str[i] != '\0')

@@ -26,7 +26,7 @@ typedef struct s_info
 	t_map		*map;
 }				t_info;
 
-int		check_map(char *file_name, t_map **map);
+int		check_map(char *file_name, t_map **map, int fd);
 void	init_map(t_map **map);
 void	start_map(int fd, t_map **map);
 void	exit_program(t_info *s_i);

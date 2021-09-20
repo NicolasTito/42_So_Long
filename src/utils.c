@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 23:33:43 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/19 23:34:21 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/19 23:39:07 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 void	exit_program(t_info *s_i)
 {
-	
+	int	i;
+
+	i = -1;
+	while (++i < s_i->map->h)
+		free(s_i->map->map[i]);
+	free(s_i->map->map);
+	free(s_i->map);
+	exit(1);
 }

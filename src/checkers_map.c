@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checkers.c                                         :+:      :+:    :+:   */
+/*   checkers_map.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 05:21:12 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/19 23:15:15 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/20 00:41:33 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@ static int	verify_rest_map(t_map **map)
 	int	i;
 	int	j;
 
-	i = 0;
+	i = -1;
 	while (++i < (*map)->h)
 	{
-		j = 0;
-		while ((*map)->map[i][j])
+		j = -1;
+		while ((*map)->map[i][++j])
 		{
 			if ((*map)->map[i][j] == 'C')
 				(*map)->info.c++;
 			else if ((*map)->map[i][j] == 'E')
-				(*map)->info.exit == 1;
+				(*map)->info.exit = 1;
 			else if ((*map)->map[i][j] == 'P')
 				(*map)->info.p++;
 			else if ((*map)->map[i][j] == 'N')
-				(*map)->info.en == 1;
-			else if ((*map)->map[i][j] != '1' || (*map)->map[i][j] != '0')
+				(*map)->info.en = 1;
+			else if ((*map)->map[i][j] != '1' && (*map)->map[i][j] != '0')
 				return (FALSE);
 		}
 	}
@@ -43,19 +43,19 @@ static int	verify_wall(t_map **map)
 	int	i;
 
 	i = -1;
-	while ((*map)->map[0][++i])
+	while (++i < (*map)->w)
 	{
-		if ((*map)->map[0][i] != 1)
+		if ((*map)->map[0][i] != '1')
 			return (FALSE);
-		if ((*map)->map[(*map)->h - 1][i] != 1)
+		if ((*map)->map[(*map)->h - 1][i] != '1')
 			return (FALSE);
 	}
 	i = -1;
 	while (++i < (*map)->h)
 	{
-		if ((*map)->map[i][0] != 1)
+		if ((*map)->map[i][0] != '1')
 			return (FALSE);
-		if ((*map)->map[i][(*map)->w - 1] != 1)
+		if ((*map)->map[i][(*map)->w - 1] != '1')
 			return (FALSE);
 	}
 	return (TRUE);
@@ -65,7 +65,7 @@ static int	verify_map(t_map **map)
 {
 	int	i;
 
-	i = -1;
+	i = 0;
 	while (++i < (*map)->h)
 	{
 		if (ft_strlen((*map)->map[i]) != (*map)->w)
@@ -99,23 +99,21 @@ static int	check_name(char *file_name, char *ber)
 }
 
 /*Validate map and create array with informations*/
-int	check_map(char *file_name, t_map **map)
+int	check_map(char *file_name, t_map **map, int fd)
 {
-	int		fd;
-
-	if (check_name(*file_name, ".ber") == FALSE)
+	if (check_name(file_name, ".ber") == FALSE)
 	{
 		ft_putstr_fd("MAP NAME ERROR 😐\n", 1);
 		return (FALSE);
 	}
-	fd = open(map, O_RDONLY);
-	start_map(fd, &map);
-	if (verify_map(&map) == FALSE || verify_rest_map(&map) == FALSE)
+	start_map(fd, map);
+	close(fd);
+	if (verify_map(map) == FALSE || verify_rest_map(map) == FALSE)
 	{
 		ft_putstr_fd("MAP ERROR 😐\n", 1);
 		return (FALSE);
 	}
-	else if (verify_wall(&map) == FALSE)
+	else if (verify_wall(map) == FALSE)
 	{
 		ft_putstr_fd("WALL ERROR 😐\n", 1);
 		return (FALSE);

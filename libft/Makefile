@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/27 14:57:28 by nide-mel          #+#    #+#              #
-#    Updated: 2021/08/26 16:26:51 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/09/19 23:53:32 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,7 @@ SRC = ft_memset.c	\
 	ft_lstmap.c	\
 	ft_lstnew.c	\
 	ft_lstsize.c	\
+	gnl.c\
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC:.c=.o))
 
