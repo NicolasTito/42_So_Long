@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 20:03:46 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/20 07:58:14 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/20 08:08:14 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	organize_map(t_map **map, char **temp)
 	i = -1;
 	(*map)->map = malloc(sizeof (int *) * (*map)->h);
 	while (++i < (*map)->h)
-		(*map)->map[i] = malloc(sizeof (int *) * (*map)->w);
+		(*map)->map[i] = malloc(sizeof (int) * (*map)->w);
 	i = -1;
 	while (++i < (*map)->h)
 	{
