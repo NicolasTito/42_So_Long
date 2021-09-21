@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 03:07:14 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/20 10:35:36 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/21 19:47:15 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ static void	populate_top_wall(t_wall *s_w, t_map **map, int i)
 	}
 	else if (((*map)->w % 2) == 1)
 	{
-		if((i % 2) == 0)
+		if ((i % 2) == 0)
 			(*map)->map[0][i] = WT;
 		else
 			(*map)->map[0][i] = WTT;
 	}
 	else
 	{
-		if((i % 2) == 0)
+		if ((i % 2) == 0)
 			(*map)->map[0][i] = WT;
 		else
 			(*map)->map[0][i] = WTT;
@@ -94,16 +94,4 @@ void	populate_wall_corner(t_map **map, char **temp)
 	populate_tb_wall(&s_w, map);
 	populate_lr_wall(&s_w, map);
 	populate_center_map(map, temp, &s_w);
-
-	int i = -1;
-	int j;
-	while (++i < (*map)->h)
-	{
-		j = -1;
-		while (++j < (*map)->w)
-		{
-			printf("%d\t", (*map)->map[i][j]);
-		}
-		printf("\n");
-	}
 }

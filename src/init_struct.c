@@ -6,11 +6,19 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 19:22:38 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/20 10:34:58 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/21 20:46:04 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+void	init_info(t_info *s_i)
+{
+	s_i->mlx = NULL;
+	s_i->win = NULL;
+	s_i->moves = 0;
+	s_i->total_collect = 0;
+}
 
 /*Start a struct with information to the map*/
 void	init_map(t_map **map)

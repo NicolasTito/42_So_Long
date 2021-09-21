@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 20:03:46 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/20 10:34:20 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/21 20:50:25 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,5 @@ void	organize_map(t_map **map, char **temp)
 			(*map)->map[i][j] = -1;
 	}
 	populate_wall_corner(map, temp);
-	free_temp(map, temp);
+	free_matrix(map, temp);
 }

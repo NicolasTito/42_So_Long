@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   init_images.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/19 23:33:43 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/21 20:50:25 by nide-mel         ###   ########.fr       */
+/*   Created: 2021/09/21 20:08:27 by nide-mel          #+#    #+#             */
+/*   Updated: 2021/09/21 20:56:21 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	exit_program(t_info *s_i, char **temp)
+void	xmp_to_image(t_info *s_i, t_img *img, char *path)
 {
-	free_matrix(&s_i->map, temp);
-	exit(1);
+	img->addr = mlx_xpm_file_to_image(s_i->mlx, path, &img->wid, &img->heig);
+	if (!img->addr)
+	{
+		free_matrix(s_i->map, s_i->map->map);
+		exit_error();
+	}
 }
 
-void	free_matrix(t_map **map, char **temp)
+void	init_images(t_info *s_i)
 {
-	int	i;
 
-	i = -1;
-	while (++i < (*map)->h)
-		free(temp[i]);
-	free(temp);
-}
-
-void	exit_error(void)
-{
-	ft_putstr_fd("UNEXPECTED ERROR\n", 1);
-	exit(1);
 }

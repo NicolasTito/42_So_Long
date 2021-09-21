@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/09/20 03:07:09 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/09/21 19:44:39 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,15 +23,15 @@ LIBFT_PATH = ./libft
 
 INCLUDES = -I libft/includes -I ./includes
 
-SRC_PATH = ./src
+SRC_PATH = ./src/*
 
 OBJ_PATH = ./obj
 
 SRC_NAME =	main.c\
-			checkers_map.c\
 			init_struct.c\
-			map_functions.c\
 			utils.c\
+			checkers_map.c\
+			map_functions.c\
 			organize_map.c\
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.o))
