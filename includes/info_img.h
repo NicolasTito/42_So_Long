@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 20:56:58 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/21 21:21:51 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/21 21:56:30 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 # define CHAR_LEFT2 "image/character/char_left_2.xpm"
 # define CHAR_RIGHT1 "image/character/char_right_1.xpm"
 # define CHAR_RIGHT2 "image/character/char_right_2.xpm"
-# define EXIT "image/collect/exit.xpm"
-# define COLLECT "image/collect/collect.xpm"
+# define IMG_EXIT "image/collect/exit.xpm"
+# define IMG_COLLECT "image/collect/collect.xpm"
 # define ENEMY_LEFT_1 "image/enemy/enemy_left_1.xpm"
 # define ENEMY_LEFT_2 "image/enemy/enemy_left_2.xpm"
 # define ENEMY_LEFT_3 "image/enemy/enemy_left_3.xpm"
@@ -50,9 +50,9 @@
 # define WALL_BOT "image/wall/wall_bot.xpm"
 # define WALL_RIGHT "image/wall/wall_right.xpm"
 # define WALL_LEFT "image/wall/wall_left.xpm"
-# define wall_c1 "image/wall/wall_c_1.xpm"
-# define wall_c2 "image/wall/wall_c_2.xpm"
-# define wall_c3 "image/wall/wall_c_3.xpm"
-# define wall_c4 "image/wall/wall_c_4.xpm"
+# define WALL_C1 "image/wall/wall_c_1.xpm"
+# define WALL_C2 "image/wall/wall_c_2.xpm"
+# define WALL_C3 "image/wall/wall_c_3.xpm"
+# define WALL_C4 "image/wall/wall_c_4.xpm"
 
 #endif
