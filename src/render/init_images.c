@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 20:08:27 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/23 17:02:50 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/23 20:18:48 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static void	xmp_to_image(t_info *s_i, t_img *img, char *path)
 {
-	img->addr = mlx_xpm_file_to_image(s_i->mlx, path, &img->wid, &img->heig);
-	if (!img->addr)
+	img->img = mlx_xpm_file_to_image(s_i->mlx, path, &img->wid, &img->heig);
+	if (!img->img)
 	{
 		free_map(&s_i->map, s_i->map->map);
 		exit_error();
@@ -79,5 +79,5 @@ void	init_images(t_info *s_i)
 	xmp_to_image(s_i, &s_i->wc_lt, WALL_C1);
 	xmp_to_image(s_i, &s_i->wc_rt, WALL_C2);
 	xmp_to_image(s_i, &s_i->wc_rb, WALL_C3);
-	xmp_to_image(s_i, &s_i->wc_lt, WALL_C4);
+	xmp_to_image(s_i, &s_i->wc_lb, WALL_C4);
 }
