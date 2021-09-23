@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 23:33:43 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/21 20:50:25 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/23 17:02:25 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,16 @@ void	exit_program(t_info *s_i, char **temp)
 }
 
 void	free_matrix(t_map **map, char **temp)
+{
+	int	i;
+
+	i = -1;
+	while (++i < (*map)->h)
+		free(temp[i]);
+	free(temp);
+}
+
+void	free_map(t_map **map, int **temp)
 {
 	int	i;
 

@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 05:30:47 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/21 21:52:26 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/23 16:51:29 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,19 @@
 # define STRUCT_SL_H
 
 # include "so_long.h"
+# include "../minilibx_mms_20200219/mlx.h"
+# include "functions_sl.h"
+
+typedef struct s_img
+{
+	void		*img;
+	char		*addr;
+	int			bits_per_pixel;
+	int			line_length;
+	int			endian;
+	int			wid;
+	int			heig;
+}				t_img;
 
 typedef struct s_info_map
 {
@@ -59,16 +72,6 @@ typedef struct s_map
 	t_info_map	info;
 }				t_map;
 
-typedef struct s_img
-{
-	void		*img;
-	char		*addr;
-	int			bits_per_pixel;
-	int			line_length;
-	int			endian;
-	int			wid;
-	int			heig;
-}				t_img;
 
 typedef struct s_info
 {
