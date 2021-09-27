@@ -3,25 +3,36 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
+#    By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/09/23 17:12:19 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/09/24 18:35:18 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
 
+OS = $(shell uname)
+
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 RM = rm -f
-LIBX = -lmlx -framework OpenGL -framework AppKit
 
 HEADER = ./includes/$(wildcard *.h)
 
 LIBFT = ./libft/libft.a
 LIBFT_PATH = ./libft
-MINILIBX_DIR = minilibx_mms_20200219
+
+ifeq ($(OS), Linux)
+	MINILIBX_DIR = ./minilibx-linux/
+	MLX_LIB = $(MINILIBX_DIR)libmlx_linux.a
+	LIBX += -L $(MINILIBX_DIR) -l mlx -lXext -lX11 -lm -lz
+else
+	LIBX = -lmlx -framework OpenGL -framework AppKit
+	MINILIBX_DIR = ./minilibx_mms_20200219/
+endif
+
+MLX_INC = -I $(MINILIBX_DIR)
 
 INCLUDES = -I libft/includes -I ./includes
 
@@ -42,16 +53,15 @@ OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.o))
 
 SRC = $(addprefix $(SRC_PATH)/, $(SRC_NAME))
 
-all : $(NAME)
+all : $(NAME) $(LIBFT) $(MLX_LIB)
 
 $(NAME): $(OBJ)
 	@make -C $(LIBFT_PATH)
-	@$(MAKE) -C $(MINILIBX_DIR)
-	@mv $(MINILIBX_DIR)/libmlx.dylib .
+	@make -C $(MINILIBX_DIR)
+	@$(CC) $(CFLAGS) $(OBJ) $(LIBX) $(INCLUDES) $(LIBFT) -o $(NAME)
 	@echo "\x1b[32m"
 	@cat ./art/ok
 	@echo ""
-	@$(CC) $(CFLAGS) $(OBJ) $(LIBX) $(INCLUDES) $(LIBFT) -o $(NAME)
 	@echo "[$(NAME) compiled]"
 	@echo "\x1b[0m"
 
@@ -60,10 +70,11 @@ $(OBJ_PATH)/%.o : $(SRC_PATH)/%.c
 	@mkdir -p obj
 	@mkdir -p obj/map
 	@mkdir -p obj/render
-	@$(CC) -c $(CFLAGS) $(INCLUDES) $< -o $@
+	@$(CC) -c $(CFLAGS) $(INCLUDES) $(MLX_INC) -o $@ -c $<
 
 clean:
 	@make clean -C $(LIBFT_PATH)
+	@make clean -C $(MINILIBX_DIR)
 	@rm -rf $(OBJ)
 	@echo "\033[33m"
 	@cat "./art/clean"

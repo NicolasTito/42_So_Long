@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 03:13:41 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/21 21:29:28 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/09/24 18:18:12 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 # include "../libft/includes/libft.h"
 # include "../minilibx_mms_20200219/mlx.h"
+# include "../minilibx-linux/mlx.h"
 # include "functions_sl.h"
 # include "info_map.h"
 # include "info_img.h"
