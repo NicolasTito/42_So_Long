@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   game_moves.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 03:13:41 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/27 17:05:58 by nide-mel         ###   ########.fr       */
+/*   Created: 2021/09/27 16:50:26 by nide-mel          #+#    #+#             */
+/*   Updated: 2021/09/27 16:51:08 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include "so_long.h"
 
-# define TRUE 1
-# define FALSE 0
-# define IMG_H	64
-# define IMG_W	64
-
-# include "../libft/includes/libft.h"
-# include "../minilibx_mms_20200219/mlx.h"
-# include "../minilibx-linux/mlx.h"
-# include "functions_sl.h"
-# include "info_map.h"
-# include "info_img.h"
-# include "struct_sl.h"
-# include "keys_game.h"
-# include <fcntl.h>
-
-#endif
+void	game_moves(int key, t_info *s_i)
+{
+	
+}

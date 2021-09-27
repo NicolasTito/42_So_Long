@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/09/24 18:35:18 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/09/27 16:51:48 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ SRC_NAME =	main.c\
 			map/organize_map.c\
 			render/init_images.c\
 			render/render_img.c\
+			render/game_moves.c\
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.o))
 
