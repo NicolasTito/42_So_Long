@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   struct_sl.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 05:30:47 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/23 16:51:29 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/02 10:31:38 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,10 @@ typedef struct s_info_map
 
 typedef struct s_player
 {
-	int			width;
-	int			height;
+	int			y;
+	int			x;
 	int			lives;
+	int			side;
 	t_img		front[2];
 	t_img		back[2];
 	t_img		right[2];

@@ -3,14 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 23:33:43 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/23 17:02:25 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/02 10:36:19 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+
+void	exit_game(t_info *s_i)
+{
+	s_i->moves++;
+	exit(0);
+}
 
 void	exit_program(t_info *s_i, char **temp)
 {

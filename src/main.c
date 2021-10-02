@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 16:57:57 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/27 16:49:51 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/02 10:39:58 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	init_game(t_info *s_i)
 	s_i->win = mlx_new_window(s_i->mlx, width, height, "SO LONG");
 	init_images(s_i);
 	render_img(s_i);
+	mlx_key_hook(s_i->win, game_moves, s_i);
 	mlx_loop(s_i->mlx);
-	mlx_key_hook(s_i->win, game_moves,s_i);
 }
 
 /*Start the game and validate everything, create and init struct*/

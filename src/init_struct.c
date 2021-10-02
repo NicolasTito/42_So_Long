@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_struct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 19:22:38 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/21 20:46:04 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/02 10:31:51 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,12 @@ void	init_wall(t_wall *s_w, int h, int w)
 		s_w->torch_h = 0;
 	else
 		s_w->torch_h = 1;
+}
+
+void	init_player(t_player *player, int x, int y)
+{
+	player->x = x;
+	player->y = y;
+	player->side = KEY_W;
+	player->lives = 3;
 }

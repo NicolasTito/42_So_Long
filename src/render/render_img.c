@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render_img.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 15:16:25 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/23 20:23:15 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/02 10:10:25 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ static void	render_collect(t_info *s_i, int x, int y)
 	{
 		put_img(s_i, &s_i->floor, x, y);
 		put_img(s_i, &s_i->player.back[0], x, y);
+		init_player (&s_i->player, x, y);
 	}
 	else if (s_i->map->map[y][x] == ENE)
 	{
