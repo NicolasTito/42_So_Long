@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:50:26 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/02 20:18:06 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/03 11:12:24 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static void	char_side(int key, t_info *s_i)
 static void	char_move_l_r(int key, t_info *s_i)
 {
 	if (key == KEY_A && s_i->map->map[s_i->player.y][s_i->player.x - 1] != 1 &&
-		s_i->map->map[s_i->player.y][s_i->player.x - 1] < 6)
+		s_i->map->map[s_i->player.y][s_i->player.x - 1] < 4)
 	{
 		put_img(s_i, &s_i->floor, s_i->player.x, s_i->player.y);
 		put_img(s_i, &s_i->player.left[1], s_i->player.x, s_i->player.y);
@@ -65,7 +65,7 @@ static void	char_move_l_r(int key, t_info *s_i)
 static void	char_move(int key, t_info *s_i)
 {
 	if (key == KEY_W && s_i->map->map[s_i->player.y - 1][s_i->player.x] != 1 &&
-		s_i->map->map[s_i->player.y - 1][s_i->player.x] < 6)
+		s_i->map->map[s_i->player.y - 1][s_i->player.x] < 4)
 	{
 		put_img(s_i, &s_i->floor, s_i->player.x, s_i->player.y);
 		put_img(s_i, &s_i->player.back[1], s_i->player.x, s_i->player.y);
@@ -74,7 +74,7 @@ static void	char_move(int key, t_info *s_i)
 		s_i->player.y--;
 	}
 	if (key == KEY_S && s_i->map->map[s_i->player.y + 1][s_i->player.x] != 1 &&
-			s_i->map->map[s_i->player.y + 1][s_i->player.x] < 6)
+			s_i->map->map[s_i->player.y + 1][s_i->player.x] < 4)
 	{
 		put_img(s_i, &s_i->floor, s_i->player.x, s_i->player.y);
 		put_img(s_i, &s_i->player.front[1], s_i->player.x, s_i->player.y);
