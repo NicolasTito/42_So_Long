@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:50:26 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/03 11:12:24 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/04 12:52:22 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,6 @@ static void	char_move(int key, t_info *s_i)
 	}
 	else
 		char_move_l_r(key, s_i);
-
 }
 
 int	game_moves(int key, t_info *s_i)
