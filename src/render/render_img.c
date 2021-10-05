@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 15:16:25 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/03 19:53:42 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/05 16:52:35 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void	render_img(t_info *s_i)
 		while (++j < s_i->map->h)
 		{
 			render_wall(s_i, i, j);
-			render_torch(s_i, i, j);;
+			render_torch(s_i, i, j);
 			render_collect(s_i, i, j);
 		}
 	}
