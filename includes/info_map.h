@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 03:13:14 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/05 16:54:38 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/05 17:33:28 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 # define INFO_MAP_H
 # define FLOOR 0
 # define COLEC 1
-# define HOLE 2
-# define PERS 3
+# define PERS 2
+# define HOLE 3
 # define EXIT 4
 # define ENE 5
 # define WC1 6
