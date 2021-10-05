@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:50:26 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/04 12:52:22 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/05 16:36:38 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,26 @@ static void	char_side(int key, t_info *s_i)
 	}
 }
 
+static void	colect_exit(int key, t_info *s_i)
+{
+	if (((key == KEY_A && s_i->map->map[s_i->player.y][s_i->player.x - 1] != 1 &&
+		s_i->map->map[s_i->player.y][s_i->player.x - 1] == 4) || (key == KEY_D &&
+		s_i->map->map[s_i->player.y][s_i->player.x + 1] != 1 &&
+		s_i->map->map[s_i->player.y][s_i->player.x + 1] == 4) || (key == KEY_W &&
+		s_i->map->map[s_i->player.y - 1][s_i->player.x] != 1 &&
+		s_i->map->map[s_i->player.y - 1][s_i->player.x] == 4) || (key == KEY_S && s_i->map->map[s_i->player.y + 1][s_i->player.x] != 1 &&
+		s_i->map->map[s_i->player.y + 1][s_i->player.x] == 4)) &&
+		s_i->map->info.c == 0)
+	{
+		exit_game(s_i);
+	}
+	if (s_i->map->map[s_i->player.x][s_i->player.y] == COLEC)
+	{
+		s_i->map->info.c--;
+		s_i->map->map[s_i->player.x][s_i->player.y] = FLOOR;
+	}
+}
+
 static void	char_move_l_r(int key, t_info *s_i)
 {
 	if (key == KEY_A && s_i->map->map[s_i->player.y][s_i->player.x - 1] != 1 &&
@@ -60,6 +80,7 @@ static void	char_move_l_r(int key, t_info *s_i)
 		put_img(s_i, &s_i->player.right[0], s_i->player.x + 1, s_i->player.y);
 		s_i->player.x++;
 	}
+	colect_exit(key, s_i);
 }
 
 static void	char_move(int key, t_info *s_i)
