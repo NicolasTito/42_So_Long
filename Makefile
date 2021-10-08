@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+         #
+#    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/10/03 20:20:29 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/10/08 12:53:43 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ SRC_NAME =	main.c\
 			render/init_images.c\
 			render/render_img.c\
 			render/game_moves.c\
+			render/utils_move.c\
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.o))
 

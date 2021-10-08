@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   functions_sl.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 21:27:25 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/03 19:54:40 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/08 12:52:15 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	populate_wall_corner(t_map **map, char **temp);
 void	populate_center_map(t_map **map, char **temp, t_wall *s_w);
 void	put_img(t_info *s_i, t_img *img, int x, int y);
 void	render_img(t_info *s_i);
+void	char_side(int key, t_info *s_i);
 int		game_moves(int key, t_info *s_i);
 
 #endif
