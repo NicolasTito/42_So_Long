@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render_img.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 15:16:25 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/05 16:52:35 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/20 13:30:14 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ void	render_img(t_info *s_i)
 	int		j;
 
 	i = -1;
+	mlx_clear_window(s_i->mlx, s_i->win);
 	while (++i < s_i->map->w)
 	{
 		j = -1;
@@ -97,3 +98,7 @@ void	render_img(t_info *s_i)
 		}
 	}
 }
+
+
+psc
+msg

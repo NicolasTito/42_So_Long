@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   keys_game.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:53:17 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/04 18:34:56 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/08 17:50:39 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@
 #  define KEY_Z 122
 
 # else
-# ifdef __APPLE__
+#  ifdef __APPLE__
 
 #   define KEY_ESC 53
 #   define KEY_TAB 48
@@ -118,6 +118,6 @@
 #   define KEY_Y 16
 #   define KEY_Z 6
 
-# endif
+#  endif
 # endif
 #endif

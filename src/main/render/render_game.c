@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   render_game.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 03:13:41 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/08 13:18:19 by nide-mel         ###   ########.fr       */
+/*   Created: 2021/10/13 15:52:54 by nide-mel          #+#    #+#             */
+/*   Updated: 2021/10/20 12:42:07 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include "so_long.h"
 
-# define TRUE 1
-# define FALSE 0
-# define IMG_H	64
-# define IMG_W	64
-
-# include "../../libft/includes/libft.h"
-# include "../../minilibx_mms_20200219/mlx.h"
-# include "../../minilibx-linux/mlx.h"
-# include "functions_sl.h"
-# include "info_map.h"
-# include "info_img.h"
-# include "struct_sl.h"
-# include "keys_game.h"
-# include <fcntl.h>
-
-#endif
+int	game_render(t_info *s_i)
+{
+	render_img(s_i);
+	return (0);
+}

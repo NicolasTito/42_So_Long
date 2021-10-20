@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 16:57:57 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/05 17:09:26 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/20 12:58:09 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ void	init_game(t_info *s_i)
 	s_i->mlx = mlx_init();
 	s_i->win = mlx_new_window(s_i->mlx, width, height, "SO LONG");
 	init_images(s_i);
-	render_img(s_i);
+	mlx_hook(s_i->win, 17, 0, destroy_window, s_i);
 	mlx_key_hook(s_i->win, game_moves, s_i);
+	mlx_loop_hook(s_i->win, game_render, s_i);
 	mlx_loop(s_i->mlx);
 }
 
@@ -37,6 +38,11 @@ void	start_program(char *file_name)
 	init_info(&s_i);
 	init_map(&s_i.map);
 	fd = open(file_name, O_RDONLY);
+	if (fd == -1)
+	{
+		ft_putstr_fd("MAP NOT EXIST", 1);
+		return ;
+	}
 	temp = start_map(fd, &s_i.map);
 	close(fd);
 	if (check_map(file_name, &s_i.map, temp) == FALSE)

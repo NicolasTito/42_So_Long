@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   struct_sl.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 05:30:47 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/03 19:52:39 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/08 17:48:55 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ typedef struct s_map
 	int			**map;
 	t_info_map	info;
 }				t_map;
-
 
 typedef struct s_info
 {

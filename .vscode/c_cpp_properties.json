@@ -4,7 +4,9 @@
             "name": "Linux",
             "includePath": [
                 "${default}",
-                "${workspaceFolder}/includes"
+                "${workspaceFolder}/includes",
+                "${workspaceFolder}/includes/main",
+                "${workspaceFolder}/includes/bonus"
             ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
