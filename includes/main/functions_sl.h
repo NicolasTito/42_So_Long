@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 21:27:25 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/20 12:57:23 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/25 12:15:36 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	put_img(t_info *s_i, t_img *img, int x, int y);
 void	render_img(t_info *s_i);
 void	char_side(int key, t_info *s_i);
 int		game_moves(int key, t_info *s_i);
-int		game_render(t_info *s_i);
 int		destroy_window(t_info *s_i);
+void	destroy_image(t_info *s_i);
 
 #endif

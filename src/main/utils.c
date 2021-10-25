@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 23:33:43 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/20 12:55:50 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/25 12:15:55 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	destroy_window(t_info *s_i)
 void	exit_game(t_info *s_i)
 {
 	free_map(&s_i->map);
+	destroy_image(s_i);
 	exit(0);
 }
 
