@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 16:57:57 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/20 12:58:09 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/08 14:02:20 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ void	init_game(t_info *s_i)
 	s_i->mlx = mlx_init();
 	s_i->win = mlx_new_window(s_i->mlx, width, height, "SO LONG");
 	init_images(s_i);
+	render_img(s_i);
 	mlx_hook(s_i->win, 17, 0, destroy_window, s_i);
 	mlx_key_hook(s_i->win, game_moves, s_i);
-	mlx_loop_hook(s_i->win, game_render, s_i);
 	mlx_loop(s_i->mlx);
 }
 
