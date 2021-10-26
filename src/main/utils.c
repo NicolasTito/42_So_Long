@@ -6,17 +6,11 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 23:33:43 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/25 12:15:55 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/26 01:17:55 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-int	destroy_window(t_info *s_i)
-{
-	exit_game(s_i);
-	return (1);
-}
 
 void	exit_game(t_info *s_i)
 {

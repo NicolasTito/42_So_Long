@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game_render.c                                      :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/26 01:05:25 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 01:16:22 by nide-mel         ###   ########.fr       */
+/*   Created: 2021/10/26 01:17:24 by nide-mel          #+#    #+#             */
+/*   Updated: 2021/10/26 01:17:40 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int	game_render(t_info *s_i)
+int	destroy_window(t_info *s_i)
 {
-	mlx_clear_window(s_i->mlx, s_i->win);
-	render_img(s_i);
-	return (0);
+	exit_game(s_i);
+	return (1);
 }
