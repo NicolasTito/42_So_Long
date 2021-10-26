@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/10/26 01:08:52 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/10/26 02:07:53 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,15 +43,16 @@ OBJ_PATH = ./obj
 SRC_NAME =	main.c\
 			init_struct.c\
 			utils.c\
+			utils2.c\
 			destroy_image.c\
 			map/checkers_map.c\
 			map/map_functions.c\
 			map/organize_map.c\
 			render/init_images.c\
 			render/render_img.c\
-			render/game_moves.c\
-			render/utils_move.c\
 			render/game_render.c\
+			moves/game_moves.c\
+			moves/utils_move.c\
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.o))
 
@@ -74,6 +75,7 @@ $(OBJ_PATH)/%.o : $(SRC_PATH)/%.c
 	@mkdir -p obj
 	@mkdir -p obj/map
 	@mkdir -p obj/render
+	@mkdir -p obj/moves
 	@$(CC) -c $(CFLAGS) $(INCLUDES) $(MLX_INC) -o $@ -c $<
 
 clean:

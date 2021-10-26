@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 15:16:25 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/13 13:12:37 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/26 04:17:56 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,22 @@ static void	render_wall(t_info *s_i, int x, int y)
 
 static void	render_torch(t_info *s_i, int x, int y)
 {
+	int	sprite;
+
+	sprite = 0;
+	if ((s_i->frames >= 10 && s_i->frames < 20)
+		|| (s_i->frames >= 30 && s_i->frames < 40))
+		sprite = 1;
+	else if (s_i->frames >= 20 && s_i->frames < 30)
+		sprite = 2;
 	if (s_i->map->map[y][x] == WTT)
-		put_img(s_i, &s_i->t_top[0], x, y);
+		put_img(s_i, &s_i->t_top[sprite], x, y);
 	else if (s_i->map->map[y][x] == WBT)
-		put_img(s_i, &s_i->t_bot[0], x, y);
+		put_img(s_i, &s_i->t_bot[sprite], x, y);
 	else if (s_i->map->map[y][x] == WLT)
-		put_img(s_i, &s_i->t_left[0], x, y);
+		put_img(s_i, &s_i->t_left[sprite], x, y);
 	else if (s_i->map->map[y][x] == WRT)
-		put_img(s_i, &s_i->t_right[0], x, y);
+		put_img(s_i, &s_i->t_right[sprite], x, y);
 }
 
 static void	render_collect(t_info *s_i, int x, int y)
@@ -70,7 +78,7 @@ static void	render_collect(t_info *s_i, int x, int y)
 	else if (s_i->map->map[y][x] == PERS)
 	{
 		put_img(s_i, &s_i->floor, x, y);
-		put_img(s_i, &s_i->player.back[0], x, y);
+		render_pers(s_i, x, y);
 		init_player (&s_i->player, x, y);
 	}
 	else if (s_i->map->map[y][x] == ENE)

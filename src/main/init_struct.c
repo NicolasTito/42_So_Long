@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_struct.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nide-mel <nide-mel@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 19:22:38 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/03 19:52:52 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/26 04:12:36 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,9 @@ void	init_info(t_info *s_i)
 	s_i->win = NULL;
 	s_i->moves = 0;
 	s_i->total_collect = 0;
+	s_i->frames = -1;
+	s_i->player.side = KEY_W;
+	s_i->player.lives = 3;
 }
 
 /*Start a struct with information to the map*/
@@ -50,6 +53,4 @@ void	init_player(t_player *player, int x, int y)
 {
 	player->x = x;
 	player->y = y;
-	player->side = KEY_W;
-	player->lives = 3;
 }

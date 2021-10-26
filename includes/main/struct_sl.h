@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 05:30:47 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/08 17:48:55 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/26 03:53:12 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ typedef struct s_info
 	void		*win;
 	int			moves;
 	int			total_collect;
+	int			frames;
 	t_map		*map;
 	t_player	player;
 	t_enemy		enemy;

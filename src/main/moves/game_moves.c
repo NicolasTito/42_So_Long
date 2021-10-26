@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:50:26 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 00:35:44 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/26 04:27:04 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ static void	char_move_l_r(int key, t_info *s_i)
 	{
 		s_i->map->map[s_i->player.y][s_i->player.x] = FLOOR;
 		s_i->player.x--;
+		if (s_i->map->map[s_i->player.y][s_i->player.x] == COLEC)
+			s_i->map->info.c--;
 		s_i->map->map[s_i->player.y][s_i->player.x] = PERS;
 		print_move(s_i);
 	}
@@ -45,6 +47,8 @@ static void	char_move_l_r(int key, t_info *s_i)
 	{
 		s_i->map->map[s_i->player.y][s_i->player.x] = FLOOR;
 		s_i->player.x++;
+		if (s_i->map->map[s_i->player.y][s_i->player.x] == COLEC)
+			s_i->map->info.c--;
 		s_i->map->map[s_i->player.y][s_i->player.x] = PERS;
 		print_move(s_i);
 	}
@@ -57,6 +61,8 @@ static void	char_move(int key, t_info *s_i)
 	{
 		s_i->map->map[s_i->player.y][s_i->player.x] = FLOOR;
 		s_i->player.y--;
+		if (s_i->map->map[s_i->player.y][s_i->player.x] == COLEC)
+			s_i->map->info.c--;
 		s_i->map->map[s_i->player.y][s_i->player.x] = PERS;
 		print_move(s_i);
 	}
@@ -64,6 +70,8 @@ static void	char_move(int key, t_info *s_i)
 	{
 		s_i->map->map[s_i->player.y][s_i->player.x] = FLOOR;
 		s_i->player.y++;
+		if (s_i->map->map[s_i->player.y][s_i->player.x] == COLEC)
+			s_i->map->info.c--;
 		s_i->map->map[s_i->player.y][s_i->player.x] = PERS;
 		print_move(s_i);
 	}
