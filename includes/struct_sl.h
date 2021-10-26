@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 05:30:47 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 04:47:16 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/26 16:28:12 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,11 @@ typedef struct s_img
 	int			wid;
 	int			heig;
 }				t_img;
+
+typedef struct s_msg
+{
+	t_img		dead_msg[3];
+}				t_msg;
 
 typedef struct s_info_map
 {

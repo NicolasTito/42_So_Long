@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/10/26 15:17:42 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/10/26 16:15:52 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ SRC_NAME =	main.c\
 			render/utils_render.c\
 			moves/game_moves.c\
 			moves/utils_move.c\
+			msg/dead_msg.c\
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.o))
 
