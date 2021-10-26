@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:50:26 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 04:27:04 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/26 05:24:34 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ int	game_moves(int key, t_info *s_i)
 	{
 		char_side(key, s_i);
 		char_move(key, s_i);
+		verify_enemy(key, s_i);
 		if (s_i->map->map[s_i->player.y][s_i->player.x] == COLEC)
 		{
 			s_i->map->info.c--;

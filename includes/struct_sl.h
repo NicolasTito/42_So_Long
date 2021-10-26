@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 05:30:47 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 03:53:12 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/26 04:47:16 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ typedef struct s_enemy
 {
 	int			width;
 	int			height;
+	int			frame;
 	t_img		e_right[4];
 	t_img		e_left[4];
 }				t_enemy;

@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 21:27:25 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 02:06:20 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/26 05:24:23 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ int		destroy_window(t_info *s_i);
 void	destroy_image(t_info *s_i);
 int		game_render(t_info *s_i);
 void	render_pers(t_info *s_i, int x, int y);
+void	render_enemy(t_info *s_i, int x, int y);
+void	verify_enemy(int key, t_info *s_i);
 
 #endif

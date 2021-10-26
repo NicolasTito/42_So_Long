@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/10/26 02:07:53 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/10/26 06:13:34 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,9 +34,9 @@ endif
 
 MLX_INC = -I $(MINILIBX_DIR)
 
-INCLUDES = -I libft/includes -I ./includes/main
+INCLUDES = -I libft/includes -I ./includes
 
-SRC_PATH = ./src/main
+SRC_PATH = ./src
 
 OBJ_PATH = ./obj
 
@@ -51,6 +51,7 @@ SRC_NAME =	main.c\
 			render/init_images.c\
 			render/render_img.c\
 			render/game_render.c\
+			render/utils_render.c\
 			moves/game_moves.c\
 			moves/utils_move.c\
 

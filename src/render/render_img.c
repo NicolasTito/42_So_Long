@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/23 15:16:25 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 04:17:56 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/26 04:55:02 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ static void	render_collect(t_info *s_i, int x, int y)
 	else if (s_i->map->map[y][x] == ENE)
 	{
 		put_img(s_i, &s_i->floor, x, y);
-		put_img(s_i, &s_i->enemy.e_left[0], x, y);
+		render_enemy(s_i, x, y);
 	}
 }
 
