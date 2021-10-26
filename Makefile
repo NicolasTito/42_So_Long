@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/10/25 23:24:35 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/10/26 01:08:52 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = so_long
 OS = $(shell uname)
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -fsanitize=address -g
 RM = rm -f
 
 HEADER = ./includes/$(wildcard *.h)
@@ -51,6 +51,7 @@ SRC_NAME =	main.c\
 			render/render_img.c\
 			render/game_moves.c\
 			render/utils_move.c\
+			render/game_render.c\
 
 OBJ = $(addprefix $(OBJ_PATH)/, $(SRC_NAME:.c=.o))
 
