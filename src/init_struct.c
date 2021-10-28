@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/19 19:22:38 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 06:11:16 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/28 05:00:17 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	init_info(t_info *s_i)
 	s_i->moves = 0;
 	s_i->total_collect = 0;
 	s_i->frames = -1;
+	s_i->msg = MSG_MAP;
 	s_i->player.side = KEY_W;
 	s_i->enemy.frame = -1;
 }

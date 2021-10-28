@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 05:30:47 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 16:28:12 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/28 05:03:39 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct s_img
 
 typedef struct s_msg
 {
-	t_img		dead_msg[3];
+	t_img		dead_msg[4];
 }				t_msg;
 
 typedef struct s_info_map
@@ -86,6 +86,8 @@ typedef struct s_info
 	int			moves;
 	int			total_collect;
 	int			frames;
+	int			msg;
+	t_msg		s_msg;
 	t_map		*map;
 	t_player	player;
 	t_enemy		enemy;

@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 20:56:58 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/09/21 21:56:30 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/28 03:03:43 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,8 @@
 # define WALL_C2 "image/wall/wall_c_2.xpm"
 # define WALL_C3 "image/wall/wall_c_3.xpm"
 # define WALL_C4 "image/wall/wall_c_4.xpm"
+# define MSG_DEAD_1 "image/msg/you_dead.xpm"
+# define MSG_DEAD_2 "image/msg/you_dead_2.xpm"
+# define MSG_DEAD_3 "image/msg/you_dead_3.xpm"
 
 #endif

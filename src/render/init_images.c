@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 20:08:27 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/25 14:07:37 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/28 03:11:32 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,14 @@ static void	xmp_to_image(t_info *s_i, t_img *img, char *path)
 	}
 }
 
-static void	init_images_char(t_info *s_i)
+static void	init_images_msg(t_info *s_i)
 {
-	xmp_to_image(s_i, &s_i->player.front[0], CHAR_FRONT1);
-	xmp_to_image(s_i, &s_i->player.front[1], CHAR_FRONT2);
-	xmp_to_image(s_i, &s_i->player.back[0], CHAR_BACK1);
-	xmp_to_image(s_i, &s_i->player.back[1], CHAR_BACK2);
-	xmp_to_image(s_i, &s_i->player.left[0], CHAR_LEFT1);
-	xmp_to_image(s_i, &s_i->player.left[1], CHAR_LEFT2);
-	xmp_to_image(s_i, &s_i->player.right[0], CHAR_RIGHT1);
-	xmp_to_image(s_i, &s_i->player.right[1], CHAR_RIGHT2);
+	xmp_to_image(s_i, &s_i->s_msg.dead_msg[0], MSG_DEAD_1);
+	xmp_to_image(s_i, &s_i->s_msg.dead_msg[1], MSG_DEAD_2);
+	xmp_to_image(s_i, &s_i->s_msg.dead_msg[2], MSG_DEAD_3);
 }
 
-static void	init_images_enemy(t_info *s_i)
+static void	init_images_enemy_char(t_info *s_i)
 {
 	xmp_to_image(s_i, &s_i->enemy.e_left[0], ENEMY_LEFT_1);
 	xmp_to_image(s_i, &s_i->enemy.e_left[1], ENEMY_LEFT_2);
@@ -44,6 +39,14 @@ static void	init_images_enemy(t_info *s_i)
 	xmp_to_image(s_i, &s_i->enemy.e_right[1], ENEMY_RIGHT_2);
 	xmp_to_image(s_i, &s_i->enemy.e_right[2], ENEMY_RIGHT_3);
 	xmp_to_image(s_i, &s_i->enemy.e_right[3], ENEMY_RIGHT_4);
+	xmp_to_image(s_i, &s_i->player.front[0], CHAR_FRONT1);
+	xmp_to_image(s_i, &s_i->player.front[1], CHAR_FRONT2);
+	xmp_to_image(s_i, &s_i->player.back[0], CHAR_BACK1);
+	xmp_to_image(s_i, &s_i->player.back[1], CHAR_BACK2);
+	xmp_to_image(s_i, &s_i->player.left[0], CHAR_LEFT1);
+	xmp_to_image(s_i, &s_i->player.left[1], CHAR_LEFT2);
+	xmp_to_image(s_i, &s_i->player.right[0], CHAR_RIGHT1);
+	xmp_to_image(s_i, &s_i->player.right[1], CHAR_RIGHT2);
 }
 
 static void	init_images_torch(t_info*s_i)
@@ -64,8 +67,8 @@ static void	init_images_torch(t_info*s_i)
 
 void	init_images(t_info *s_i)
 {
-	init_images_char(s_i);
-	init_images_enemy(s_i);
+	init_images_msg(s_i);
+	init_images_enemy_char(s_i);
 	init_images_torch(s_i);
 	xmp_to_image(s_i, &s_i->floor, IMG_FLOOR);
 	xmp_to_image(s_i, &s_i->hole, IMG_HOLE);

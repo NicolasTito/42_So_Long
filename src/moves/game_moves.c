@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:50:26 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 15:28:49 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/28 04:44:05 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ static void	colect_exit(int key, t_info *s_i)
 		|| (key == KEY_W
 			&& s_i->map->map[s_i->player.y - 1][s_i->player.x] == 4))
 		&& s_i->map->info.c == 0)
+	{
 		exit_game(s_i);
+		s_i->msg = MSG_EXIT;
+	}
 }
 
 static void	char_move_l_r(int key, t_info *s_i)
@@ -52,7 +55,8 @@ static void	char_move_l_r(int key, t_info *s_i)
 		s_i->map->map[s_i->player.y][s_i->player.x] = PERS;
 		print_move(s_i);
 	}
-	colect_exit(key, s_i);
+	else
+		colect_exit(key, s_i);
 }
 
 static void	char_move(int key, t_info *s_i)
@@ -84,7 +88,8 @@ int	game_moves(int key, t_info *s_i)
 		exit_game(s_i);
 	if (key == KEY_ESC)
 		exit_game(s_i);
-	else if (key == KEY_W || key == KEY_A || key == KEY_S || key == KEY_D)
+	else if ((key == KEY_W || key == KEY_A || key == KEY_S || key == KEY_D)
+		&& s_i->msg == MSG_MAP)
 	{
 		char_side(key, s_i);
 		verify_enemy(key, s_i);
@@ -95,5 +100,7 @@ int	game_moves(int key, t_info *s_i)
 			s_i->map->map[s_i->player.y][s_i->player.x] = FLOOR;
 		}
 	}
+	else if ((key == KEY_W || key == KEY_A || key == KEY_S || key == KEY_D))
+		exit_game(s_i);
 	return (0);
 }

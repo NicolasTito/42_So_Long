@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 01:05:25 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 06:12:14 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/28 06:34:17 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ int	game_render(t_info *s_i)
 	mlx_clear_window(s_i->mlx, s_i->win);
 	counter_frame(s_i);
 	render_img(s_i);
+	if (s_i->msg == MSG_DEAD)
+		dead_msg(s_i);
 	return (0);
 }

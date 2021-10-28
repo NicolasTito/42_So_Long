@@ -6,7 +6,7 @@
 #    By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/06 16:03:32 by nide-mel          #+#    #+#              #
-#    Updated: 2021/10/26 16:15:52 by nide-mel         ###   ########.fr        #
+#    Updated: 2021/10/27 20:09:25 by nide-mel         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,6 +76,7 @@ $(OBJ_PATH)/%.o : $(SRC_PATH)/%.c
 	@mkdir -p obj/map
 	@mkdir -p obj/render
 	@mkdir -p obj/moves
+	@mkdir -p obj/msg
 	@$(CC) -c $(CFLAGS) $(INCLUDES) $(MLX_INC) -o $@ -c $<
 
 clean:

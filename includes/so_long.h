@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 03:13:41 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/08 13:18:19 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/28 01:47:35 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,11 @@
 
 # define TRUE 1
 # define FALSE 0
-# define IMG_H	64
-# define IMG_W	64
+# define IMG_H 64
+# define IMG_W 64
+# define MSG_MAP 0
+# define MSG_DEAD 1
+# define MSG_EXIT 2
 
 # include "../../libft/includes/libft.h"
 # include "../../minilibx_mms_20200219/mlx.h"

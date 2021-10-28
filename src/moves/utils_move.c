@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 12:51:16 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/26 15:30:03 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/28 01:58:12 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ void	verify_enemy(int key, t_info *s_i)
 	|| (s_i->map->map[s_i->player.y - 1][s_i->player.x] == ENE && key == KEY_W)
 	|| (s_i->map->map[s_i->player.y][s_i->player.x - 1] == ENE && key == KEY_A)
 	|| (s_i->map->map[s_i->player.y][s_i->player.x + 1] == ENE && key == KEY_D))
-		exit_game(s_i);
+		s_i->msg = MSG_DEAD;
 }
