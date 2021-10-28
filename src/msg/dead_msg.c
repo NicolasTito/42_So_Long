@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 16:15:55 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/28 06:38:56 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/28 06:40:50 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,5 @@ void	dead_msg(t_info *s_i)
 	else if (s_i->map->w == 4)
 		put_msg(s_i, &s_i->s_msg.dead_msg[2], 2, 2);
 	else
-	{
 		put_msg(s_i, &s_i->s_msg.dead_msg[1], x * IMG_H, 1);
-	}
 }

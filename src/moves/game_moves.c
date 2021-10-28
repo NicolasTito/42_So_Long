@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:50:26 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/28 04:44:05 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/28 07:27:36 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,6 @@ static void	char_move(int key, t_info *s_i)
 
 int	game_moves(int key, t_info *s_i)
 {
-	if (s_i->moves == 100)
-		exit_game(s_i);
 	if (key == KEY_ESC)
 		exit_game(s_i);
 	else if ((key == KEY_W || key == KEY_A || key == KEY_S || key == KEY_D)
@@ -102,5 +100,7 @@ int	game_moves(int key, t_info *s_i)
 	}
 	else if ((key == KEY_W || key == KEY_A || key == KEY_S || key == KEY_D))
 		exit_game(s_i);
+	if (s_i->moves == 100)
+		s_i->msg = MSG_DEAD;
 	return (0);
 }
