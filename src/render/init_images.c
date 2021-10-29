@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 20:08:27 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/28 03:11:32 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/29 22:40:35 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ static void	init_images_msg(t_info *s_i)
 	xmp_to_image(s_i, &s_i->s_msg.dead_msg[0], MSG_DEAD_1);
 	xmp_to_image(s_i, &s_i->s_msg.dead_msg[1], MSG_DEAD_2);
 	xmp_to_image(s_i, &s_i->s_msg.dead_msg[2], MSG_DEAD_3);
+	xmp_to_image(s_i, &s_i->s_msg.win_msg[0], MSG_WIN_0);
+	xmp_to_image(s_i, &s_i->s_msg.win_msg[1], MSG_WIN_1);
+	xmp_to_image(s_i, &s_i->s_msg.win_msg[2], MSG_WIN_2);
 }
 
 static void	init_images_enemy_char(t_info *s_i)

@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/27 16:50:26 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/28 07:27:36 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/29 23:34:10 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,7 @@ static void	colect_exit(int key, t_info *s_i)
 		|| (key == KEY_W
 			&& s_i->map->map[s_i->player.y - 1][s_i->player.x] == 4))
 		&& s_i->map->info.c == 0)
-	{
-		exit_game(s_i);
 		s_i->msg = MSG_EXIT;
-	}
 }
 
 static void	char_move_l_r(int key, t_info *s_i)

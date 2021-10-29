@@ -6,7 +6,7 @@
 /*   By: nide-mel <nide-mel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 20:56:58 by nide-mel          #+#    #+#             */
-/*   Updated: 2021/10/28 03:03:43 by nide-mel         ###   ########.fr       */
+/*   Updated: 2021/10/29 22:38:06 by nide-mel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,8 @@
 # define MSG_DEAD_1 "image/msg/you_dead.xpm"
 # define MSG_DEAD_2 "image/msg/you_dead_2.xpm"
 # define MSG_DEAD_3 "image/msg/you_dead_3.xpm"
+# define MSG_WIN_0 "image/msg/you_win_0.xpm"
+# define MSG_WIN_1 "image/msg/you_win_1.xpm"
+# define MSG_WIN_2 "image/msg/you_win_2.xpm"
 
 #endif
